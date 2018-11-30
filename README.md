@@ -11,7 +11,7 @@ mpirun -np 4 python main.py
 Training for approximately 10 hours with 4 workers produces a model with lifelike walking capable of scoring around 9700 in the test environment. 
 
 
-![Alt Text](https://github.com/lancerane/NIPS-2018-AI-for-Prosthetics/out.gif)
+![Alt Text](https://github.com/lancerane/NIPS-2018-AI-for-Prosthetics/blob/master/out.gif)
 
 
 Further training with removal of imitation from the reward function will improve scores further; a score of 9853 was reached in the competition.
