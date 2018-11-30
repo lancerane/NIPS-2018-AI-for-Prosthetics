@@ -1,6 +1,6 @@
 # NIPS-2018-AI-for-Prosthetics
 
-Code for the 7th-placed solution to the 2018 NIPS AI For Prosthetics competition. OpenAI's BAselines implementation of PPO serves as the basis for the learning algorithm. To speed up training, state trajectories at different walking speeds are included in the osim-rl/osim/data folder.
+Code for the 7th-placed solution to the 2018 NIPS AI For Prosthetics competition: http://osim-rl.stanford.edu/docs/nips2018/. OpenAI's Baselines implementation of PPO serves as the basis for the learning algorithm. To speed up training, state trajectories at different walking speeds are included in the osim-rl/osim/data folder.
 
 main.py defines the entry-point. Training can be distributed across 4 workers with:
 
