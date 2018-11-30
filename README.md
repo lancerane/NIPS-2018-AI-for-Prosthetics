@@ -8,7 +8,13 @@ main.py defines the entry-point. Training can be distributed across 4 workers wi
 mpirun -np 4 python main.py
 ```
 
-Training for approximately 10 hours with 4 workers produces a model with lifelike walking capable of scoring around 9700 in the test environment. Further training with removal of imitation from the reward function will improve scores further; a score of 9853 was reached in the competition.
+Training for approximately 10 hours with 4 workers produces a model with lifelike walking capable of scoring around 9700 in the test environment. 
+
+
+![Alt Text](https://github.com/lancerane/NIPS-2018-AI-for-Prosthetics/out.gif)
+
+
+Further training with removal of imitation from the reward function will improve scores further; a score of 9853 was reached in the competition.
 
 Please note:
 - Changing the number of workers will necessitate alteration of the batch size and total timestep parameters in main.py.
