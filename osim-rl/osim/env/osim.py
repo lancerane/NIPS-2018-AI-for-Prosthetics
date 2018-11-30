@@ -433,15 +433,16 @@ class ProstheticsEnv_R2_multiclip(OsimEnv):
     
 
     model_path = os.path.join(os.path.dirname(__file__), '../models/gait14dof22musc_pros_20180507.osim')     
-    k_path3 = '~/osim-rl_modded_repo/osim/gait1422pros125ms_1046_20from_standing_with_com_and_endeffs.csv'
-    k_path5 = '~/osim-rl_modded_repo/osim/gait1422pros1.75ms_114810from_standing_with_com_and_endeffs.csv'
-    k_path = '~/osim-rl_modded_repo/osim/gait1422pros0.75ms_113510from_standing_with_com_and_endeffs.csv'
+    k_path = os.path.join(os.path.dirname(__file__), '../data/075.osim')     
+    k_path2 = os.path.join(os.path.dirname(__file__), '../data/125.osim')     
+    k_path3 = os.path.join(os.path.dirname(__file__), '../data/175.osim')     
 
-    k_paths = [k_path, k_path3, k_path5]
+
+    k_paths = [k_path, k_path2, k_path3]
     k_paths_dict = {}
     k_paths_dict[0.75] = k_path
-    k_paths_dict[1.25] = k_path3
-    k_paths_dict[1.75] = k_path5
+    k_paths_dict[1.25] = k_path2
+    k_paths_dict[1.75] = k_path3
 
 
     time_limit = 890 
