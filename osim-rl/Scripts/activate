@@ -1,0 +1,2 @@
+#!/usr/bin/env bash 
+source C:\Users\LR2214\AppData\Local\Continuum\Anaconda3\Scripts\activate "$@"

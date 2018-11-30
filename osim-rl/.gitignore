@@ -1,0 +1,11 @@
+dist/
+osim_rl.egg-info/
+scripts/keras-rl/rl
+build/
+*~
+*.log
+*#
+*.pyc
+_site
+*.lock
+.sass-cache
