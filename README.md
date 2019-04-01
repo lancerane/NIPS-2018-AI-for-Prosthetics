@@ -21,7 +21,6 @@ conda install -c conda-forge lapack git
 
 ```
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
-
 ```
 And on Mac OS:
 
