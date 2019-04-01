@@ -30,10 +30,6 @@ brew install cmake openmpi
 Tensorflow:
 
 ```
-pip install tensorflow-gpu # if you have a CUDA-compatible gpu and proper drivers
-```
-or:
-```
 pip install tensorflow
 ```
 For more info, see:
