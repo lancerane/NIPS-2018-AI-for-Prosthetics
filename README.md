@@ -2,7 +2,7 @@
 
 Code for the 7th-placed solution to the 2018 NIPS AI For Prosthetics competition: http://osim-rl.stanford.edu/docs/nips2018/. OpenAI's Baselines implementation of PPO serves as the basis for the learning algorithm. To speed up training, state trajectories at different walking speeds are included in the osim-rl/osim/data folder.
 
-# Usage
+## Usage
 1. Clone repo:
 
 ```
