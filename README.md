@@ -35,7 +35,7 @@ conda install -c conda-forge lapack git
 ```
 cd NIPS-2018-AI-for-Prosthetics
 cd baselines
-pip install mpi4py
+conda install mpi4py
 pip install -e .
 ```
 5. Update Opensim
