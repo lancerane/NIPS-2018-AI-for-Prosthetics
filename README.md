@@ -30,7 +30,7 @@ conda create -n opensim-rl -c kidzik opensim python=3.6.1
 source activate opensim-rl
 conda install -c conda-forge lapack git
 ```
-4. Install baselines and mpi
+4. Install mpi and modified baselines
 
 ```
 cd NIPS-2018-AI-for-Prosthetics
@@ -38,10 +38,10 @@ cd baselines
 conda install mpi4py
 pip install -e .
 ```
-5. Update Opensim
+5. Install modified Opensim modules
 
 ```
-cd NIPS-2018-AI-for-Prosthetics
+cd ..
 cd osim-rl
 pip install -e .
 ```
