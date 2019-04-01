@@ -40,8 +40,7 @@ https://github.com/openai/baselines
 4. Install mpi and modified baselines
 
 ```
-cd NIPS-2018-AI-for-Prosthetics
-cd baselines
+cd NIPS-2018-AI-for-Prosthetics/baselines
 conda install mpi4py
 pip install -e .
 ```
