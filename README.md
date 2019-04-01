@@ -9,10 +9,19 @@ Code for the 7th-placed solution to the 2018 NIPS AI For Prosthetics competition
 git clone --recursive https://github.com/lancerane/NIPS-2018-AI-for-Prosthetics.git
 ```
 
-2. Prerequisites for baselines (Ubuntu)
+2. Opensim requirements
+
+```
+conda create -n opensim-rl -c kidzik opensim python=3.6.1
+source activate opensim-rl
+conda install -c conda-forge lapack git
+```
+
+3. Prerequisites for baselines (Ubuntu)
 
 ```
 sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+
 ```
 And on Mac OS:
 
@@ -32,13 +41,7 @@ For more info, see:
 
 https://github.com/openai/baselines
 
-3. Opensim requirements
 
-```
-conda create -n opensim-rl -c kidzik opensim python=3.6.1
-source activate opensim-rl
-conda install -c conda-forge lapack git
-```
 4. Install mpi and modified baselines
 
 ```
