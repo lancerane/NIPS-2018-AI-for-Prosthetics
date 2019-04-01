@@ -38,9 +38,6 @@ def traj_segment_generator(pi, env, horizon, stochastic):
         prevac = ac
         ac, vpred = pi.act(stochastic, ob)
 
-        if frameskip !=None:
-            if t > 0 and t%frameskip !=0:
-                ac = prevac
 
         # Slight weirdness here because we need value function at time T
         # before returning segment [0, T-1] so we get the correct
@@ -177,7 +174,7 @@ def learn(env, seed, policy_fn, *,
 
     # Prepare for rollouts
     # ----------------------------------------
-    seg_gen = traj_segment_generator(pi, env, timesteps_per_actorbatch, stochastic=stochastic, frameskip=frameskip)
+    seg_gen = traj_segment_generator(pi, env, timesteps_per_actorbatch, stochastic=stochastic)
 
     episodes_so_far = 0
     timesteps_so_far = 0

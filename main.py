@@ -1,4 +1,5 @@
 from mpi4py import MPI
+from osim.env import ProstheticsEnv_R2_multiclip
 from baselines.common import set_global_seeds
 from baselines import bench
 import os.path as osp
@@ -7,7 +8,6 @@ from baselines.common.cmd_util import atari_arg_parser
 import opensim
 import pandas as pd
 import numpy as np
-from osim.env import ProstheticsEnv_R2_multiclip
 import gym
 import tensorflow
 from baselines.common.mpi_running_mean_std import RunningMeanStd
@@ -113,8 +113,7 @@ def train(num_timesteps, seed, save_model_with_prefix, restore_model_from_file, 
         restore_model_from_file=restore_model_from_file,
         load_after_iters = load_after_iters,
         save_after = save_after,
-        stochastic=stochastic,
-        frameskip=frameskip
+        stochastic=stochastic
     )
     env.close()
 

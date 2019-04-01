@@ -433,14 +433,15 @@ class ProstheticsEnv_R2_multiclip(OsimEnv):
     
 
     model_path = os.path.join(os.path.dirname(__file__), '../models/gait14dof22musc_pros_20180507.osim')     
-    k_path = os.path.join(os.path.dirname(__file__), '../data/075.osim')     
-    k_path2 = os.path.join(os.path.dirname(__file__), '../data/125.osim')     
-    k_path3 = os.path.join(os.path.dirname(__file__), '../data/175.osim')     
+    # k_path = '~/osim-rl_modded_repo/osim//data/075.osim.csv'
+    k_path1 = os.path.join(os.path.dirname(__file__), '../data/075.csv')     
+    k_path2 = os.path.join(os.path.dirname(__file__), '../data/125.csv')     
+    k_path3 = os.path.join(os.path.dirname(__file__), '../data/175.csv')     
 
 
-    k_paths = [k_path, k_path2, k_path3]
+    k_paths = [k_path1, k_path2, k_path3]
     k_paths_dict = {}
-    k_paths_dict[0.75] = k_path
+    k_paths_dict[0.75] = k_path1
     k_paths_dict[1.25] = k_path2
     k_paths_dict[1.75] = k_path3
 
@@ -528,7 +529,6 @@ class ProstheticsEnv_R2_multiclip(OsimEnv):
         cm_pos_z = [state_desc["misc"]["mass_center_pos"][2] - pelvis_z_pos]
         res = res + cm_pos_x + cm_pos_y + state_desc["misc"]["mass_center_vel"] + state_desc["misc"]["mass_center_acc"]
 
-        self.state_buffer.append(res)
 
         return res
 
@@ -540,7 +540,7 @@ class ProstheticsEnv_R2_multiclip(OsimEnv):
 
         velocities = sorted(list(self.k_paths_dict.keys()))
 
-        if test == True or np.random.rand() > 0.5
+        if test == True or np.random.rand() > 0.5:
             velocity [0] = 1.25
 
         else:
@@ -670,3 +670,11 @@ class ProstheticsEnv_R2_multiclip(OsimEnv):
 
         return [ obs, self.reward(self.osim_model.istep)[0], self.reward(self.osim_model.istep)[1], self.is_done() or (self.osim_model.istep >= (self.spec.timestep_limit+self.osim_model.start_point)), {} ]
 
+
+def rect(row):
+    r = row[0]
+    theta = row[1]
+    x = r * math.cos(theta)
+    y = 0
+    z = r * math.sin(theta)
+    return np.array([x,y,z])
